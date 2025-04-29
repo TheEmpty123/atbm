@@ -15,7 +15,7 @@ public class EncToolApp {
         // Set up the main frame
         frame = new JFrame("Encryption Tool");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(800, 600);
+        frame.setSize(800, 800);
         frame.setLocationRelativeTo(null);
 
         // Create a tabbed pane
