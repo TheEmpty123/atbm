@@ -6,6 +6,7 @@ import com.enctool.app.algorithm.DESAlgorithm;
 import com.enctool.app.algorithm.RC4Algorithm;
 import com.enctool.app.algorithm.TripleDESAlgorithm;
 import com.enctool.app.algorithm.SymmetricAlgorithm;
+import com.enctool.app.algorithm.TwofishAlgorithm;
 
 import javax.swing.*;
 import javax.swing.filechooser.FileNameExtensionFilter;
@@ -55,6 +56,7 @@ public class SymmetricEncryptionPanel extends JPanel {
     private final SymmetricAlgorithm blowfishAlgorithm;
     private final SymmetricAlgorithm tripleDESAlgorithm;
     private final SymmetricAlgorithm rc4Algorithm;
+    private final SymmetricAlgorithm twofishAlgorithm;
 
     // Constants for CardLayout
     private static final String TEXT_MODE = "TEXT_MODE";
@@ -73,6 +75,7 @@ public class SymmetricEncryptionPanel extends JPanel {
         blowfishAlgorithm = new BlowfishAlgorithm();
         tripleDESAlgorithm = new TripleDESAlgorithm();
         rc4Algorithm = new RC4Algorithm();
+        twofishAlgorithm = new TwofishAlgorithm();
         currentAlgorithm = aesAlgorithm; // Default to AES
         
         fileChooser = new JFileChooser();
@@ -103,7 +106,7 @@ public class SymmetricEncryptionPanel extends JPanel {
         controlPanel.add(modePanel, gbc);
         
         JLabel algorithmLabel = new JLabel("Algorithm:");
-        algorithmComboBox = new JComboBox<>(new String[]{"AES", "DES", "3DES", "Blowfish", "RC4"});
+        algorithmComboBox = new JComboBox<>(new String[]{"AES", "DES", "3DES", "Blowfish", "RC4", "Twofish"});
         
         JLabel keySizeLabel = new JLabel("Key Size (bits):");
         keySizeComboBox = new JComboBox<>();
@@ -297,6 +300,9 @@ public class SymmetricEncryptionPanel extends JPanel {
                     break;
                 case "RC4":
                     currentAlgorithm = rc4Algorithm;
+                    break;
+                case "Twofish":
+                    currentAlgorithm = twofishAlgorithm;
                     break;
             }
             
