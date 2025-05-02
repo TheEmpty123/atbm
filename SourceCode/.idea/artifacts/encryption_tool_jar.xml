@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="encryption-tool:jar">
+    <output-path>$USER_HOME$/Desktop</output-path>
+    <root id="archive" name="encryption-tool.jar">
+      <element id="module-output" name="encryption-tool" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/bouncycastle/bcprov-jdk18on/1.76/bcprov-jdk18on-1.76.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

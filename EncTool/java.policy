@@ -1,4 +1,0 @@
-// Grant all permissions to the application
-grant {
-    permission java.security.AllPermission;
-};
